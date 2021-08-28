@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    配置user对象创建-->
+    <bean id="user" class="com.atguigu.spring5.testDwmo.User" ></bean>
+
+<!--&lt;!&ndash;    set方法注入属性&ndash;&gt;-->
+<!--    <bean id="book" class="com.atguigu.spring5.testDwmo.Book">-->
+<!--&lt;!&ndash;        使用property完成属性注入&ndash;&gt;-->
+<!--        <property name="bName" value="三国"></property>-->
+<!--        <property name="bauthor" value="天堂"></property>-->
+<!--    </bean>-->
+
+<!--    有参构造注入属性-->
+    <bean id="orders" class="com.atguigu.spring5.testDwmo.Orders">
+        <constructor-arg name="oName" value="电脑"></constructor-arg>
+        <constructor-arg name="address" value="China"></constructor-arg>
+    </bean>
+
+    <!--    set方法注入属性-->
+    <bean id="book" class="com.atguigu.spring5.testDwmo.Book"  p:bauthor="毛泽东">
+<!--        属性中设置null-->
+        <property name="address">
+            <null></null>
+        </property>
+        <property name="bName">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+    </bean>
+</beans>
