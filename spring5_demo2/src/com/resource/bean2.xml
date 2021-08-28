@@ -13,7 +13,7 @@
         <value>西游记</value>
     </util:list>
 <!--    提取list集合类型属性注入使用-->
-    <bean id="book" class="com.code.collectiontype.Book">
+    <bean id="book" class="com.code.collectiontype.Book" scope="prototype">
         <property name="list" ref="bookList"></property>
     </bean>
 </beans>
