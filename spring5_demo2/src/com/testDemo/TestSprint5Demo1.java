@@ -1,5 +1,6 @@
 package com.testDemo;
 
+import com.autowire.Emp;
 import com.bean.Orders;
 import com.code.collectiontype.Book;
 import com.code.collectiontype.Course;
@@ -53,5 +54,12 @@ public class TestSprint5Demo1 {
 
 //        手动让Bean实例销毁
         context.close();
+    }
+
+    @Test
+    public void test4() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("com/resource/bean5.xml");
+        Emp emp = context.getBean("emp", Emp.class);
+        System.out.println(emp);
     }
 }
