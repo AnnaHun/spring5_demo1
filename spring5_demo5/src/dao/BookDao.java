@@ -12,4 +12,10 @@ import entity.Book;
  */
 public interface BookDao {
     void add(Book book);
+
+    void updateBook(Book book);
+
+    void delete(String id);
+
+    int selectCount();
 }
