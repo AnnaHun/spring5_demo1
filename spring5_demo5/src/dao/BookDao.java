@@ -2,6 +2,8 @@ package dao;
 
 import entity.Book;
 
+import java.util.List;
+
 /**
  * Created by Intellij IDEA.
  *
@@ -18,4 +20,14 @@ public interface BookDao {
     void delete(String id);
 
     int selectCount();
+
+    Book findBookInfo(String id);
+
+    List<Book> findAllBook();
+
+    void batchAddBook(List<Object[]> batchArgs);
+
+    void batchUpdateBook(List<Object[]> batchArgs);
+
+    void batchDeleteBooks(List<Object[]> batchArgs);
 }

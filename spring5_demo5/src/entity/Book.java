@@ -36,4 +36,13 @@ public class Book {
     public void setuStatus(String uStatus) {
         this.uStatus = uStatus;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", uStatus='" + uStatus + '\'' +
+                '}';
+    }
 }
